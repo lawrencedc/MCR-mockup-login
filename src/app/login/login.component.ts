@@ -110,9 +110,9 @@ export class LoginComponent implements OnInit {
                         localStorage.setItem('FirstName', accessToken.FirstName);
                         localStorage.setItem('LastName', accessToken.LastName);
                         localStorage.setItem('IsAdmin', accessToken.IsAdmin);
+                        localStorage.setItem('token_type', accessToken.token_type);
 
                         this.cookieService.set('access_token', accessToken.access_token, accessToken.expires_in);
-                        this.cookieService.set('token_type', accessToken.token_type, accessToken.expires_in);
                         this.router.navigate([this.returnUrl]);
                     },
                     error => {
