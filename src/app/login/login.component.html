@@ -1,0 +1,26 @@
+<div class="text-center text-uppercase margin-top"></div>
+<div class="login-background"></div>
+<div class="form-wall">
+    <form class="form-signin  materialize clearfix"
+    [formGroup]="loginform"
+    (ngSubmit)="login()">
+        <div class="col-md-12 center">
+            <img src="../assets/img/MCR-logo-EDIT.png" class="login-logo"  alt="">
+        </div>
+        <div class="col-md-12">
+            <input type="email" class="form-control" formControlName="username" name="username" placeholder=" " required>
+            <label for="username" class="md-label">Email</label>
+        </div>
+        <div class="col-md-12">
+            <input type="password" class="form-control" formControlName="password" name="password" placeholder=" " required>
+            <label for="password" class="md-label">Password</label>
+        </div>
+        <div class="col-md-12">
+            <button class="btn btn-block btn-lg btn-primary theme">Sign in</button>
+            <div class="center forget-password">
+                <a href="#">Forget your password?</a>
+            </div>
+        </div>
+    </form>
+    <div class="col-md-12 center top-margin-sm"></div>
+</div>
