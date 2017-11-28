@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { Session } from '../session/session';
 
 import { LoginComponent } from './login/login.component';
+import { ForgetPasswordComponent } from './forgetPassword/forgetPassword.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -23,7 +24,8 @@ import {
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,
