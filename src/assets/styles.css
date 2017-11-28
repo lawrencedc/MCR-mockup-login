@@ -25,6 +25,14 @@
 .mg-btm-1 {
     margin-bottom: 75px !important;
 }
+
+.mg-btm-2 {
+    margin-bottom: 100px !important;
+}
+
+.mg-btm-3 {
+    margin-bottom: 0px !important;
+}
 /**** MCR STYLE ****/
 
 a {
@@ -1045,6 +1053,7 @@ a.no_style { /*ui-sref-if dicrective css class*/
   padding: 5px;
   margin-bottom: 30px;
 }
+
 .logo{
   height: 35px;
   margin-top: 5px;

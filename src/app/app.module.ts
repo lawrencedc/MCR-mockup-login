@@ -8,6 +8,7 @@ import { Session } from '../session/session';
 
 import { LoginComponent } from './login/login.component';
 import { ForgetPasswordComponent } from './forgetPassword/forgetPassword.component';
+import { ConfirmPasswordComponent } from './confirmPassword/confirmPassword.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -25,7 +26,8 @@ import {
   declarations: [
     AppComponent,
     LoginComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    ConfirmPasswordComponent
   ],
   imports: [
     BrowserModule,
