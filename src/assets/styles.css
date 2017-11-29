@@ -1032,8 +1032,9 @@ a.no_style { /*ui-sref-if dicrective css class*/
 .form-wall {
   margin: auto;
   position: fixed !important;
-  top: 55%;
-  left: 50%;
+  top: 60%;
+  /* left: 50%; */
+  right: -5%;
   transform: translate( -50%,  -60%);
 }
 .form-signin {
