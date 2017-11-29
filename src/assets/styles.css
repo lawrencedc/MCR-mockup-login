@@ -1029,13 +1029,66 @@ a.no_style { /*ui-sref-if dicrective css class*/
 .sign-in-top {
   margin-top: 200px;
 }
+
+/* IPHONE 5 SIZE */
+@media (min-width: 310px) and (max-width: 320px) {
+    .form-wall {
+        height: 300px !important;
+        transform: translate( -20%,  -97%) !important;
+    }
+
+    .form-signin {
+        min-width: 200px !important;
+        max-width: 250px !important;
+        padding: 11% !important;
+    }
+
+    .login-logo {
+        height: 60px !important;
+        margin-top: 30px;
+    }
+
+    /* .btn-block{
+        width:50% !important;
+    } */
+}
+
+/* IPHONE 6 SIZE */
+@media (min-width: 360px) and (max-width: 375px) {
+    .form-wall {
+        transform: translate( -18%,  -60%) !important;
+    }
+
+    .form-signin {
+        padding: 10% !important;
+    }
+}
+
+/* IPHONE 6 PLUS SIZE */
+@media (min-width: 400px) and (max-width: 414px) {
+    .form-wall {
+        transform: translate( -25%,  -60%) !important;
+    }
+
+    .form-signin {
+        padding: 10% !important;
+    }
+}
+
+/* IPAD SIZE*/
+@media (min-width: 760px) and (max-width: 768px) {
+    .form-wall {
+        transform: translate( -78%,  -60%) !important;
+    }
+}
+
 .form-wall {
-  margin: auto;
-  position: fixed !important;
-  top: 60%;
-  /* left: 50%; */
-  right: -5%;
-  transform: translate( -50%,  -60%);
+    margin: auto;
+    position: fixed !important;
+    top: 60%;
+    /* left: 50%; */
+    right: -5%;
+    transform: translate( -50%,  -60%);
 }
 .form-signin {
     /* border: 1px solid rgb(0, 150, 136); */
