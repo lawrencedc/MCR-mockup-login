@@ -1,3 +1,5 @@
+import { APIModel } from './../../models/APIModel';
+import { TokenModel } from './../../models/TokenModel';
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Http } from '@angular/http';
 import { URLSearchParams } from '@angular/http';
@@ -21,8 +23,11 @@ export class LoginComponent implements OnInit {
         private router: Router,
         private toastr: ToastsManager,
         private cookieService: CookieService,
+        public api_model: APIModel,
+        public access_model: TokenModel,
         vcr: ViewContainerRef
-    ) { this.toastr.setRootViewContainerRef(vcr);
+    ) { 
+        this.toastr.setRootViewContainerRef(vcr);
     }
 
     private returnUrl: string;
@@ -71,29 +76,30 @@ export class LoginComponent implements OnInit {
             body.set('username', this.loginform.value['username']); // 'yourchapter/testcgn19284@mychapterroom.com');
             body.set('password', this.loginform.value['password']);
             body.set('grant_type', 'password');
-            interface RootObject {
-                _body: string;
-                status: number;
-                ok: boolean;
-                statusText: string;
-                headers: Headers;
-                type: number;
-                url: string;
-            }
-
-            interface AccessToken {
-                access_token: string;
-                token_type: string;
-                expires_in: number;
-                User: string;
-                MemberId: string;
-                MemberType: string;
-                ChapterId: string;
-                BondId: string;
-                FirstName: string;
-                LastName: string;
-                IsAdmin: string;
-            }
+            // const _apimodel = this.api_model = new APIModel();
+            // interface RootObject {
+            //     _body: string;
+            //     status: number;
+            //     ok: boolean;
+            //     statusText: string;
+            //     headers: Headers;
+            //     type: number;
+            //     url: string;
+            // }
+            // this.api_model = new APIModel();
+            // interface AccessToken {
+            //     access_token: string;
+            //     token_type: string;
+            //     expires_in: number;
+            //     User: string;
+            //     MemberId: string;
+            //     MemberType: string;
+            //     ChapterId: string;
+            //     BondId: string;
+            //     FirstName: string;
+            //     LastName: string;
+            //     IsAdmin: string;
+            // }
 
             this._httpService.post(this.apiUrl, body)
                 .subscribe(
@@ -101,8 +107,14 @@ export class LoginComponent implements OnInit {
                         this.loginform.reset();
                         const response = JSON.stringify(data);
                         const jsonObj: any = JSON.parse(response);
-                        const obj: RootObject = <RootObject>jsonObj;
-                        const accessToken: AccessToken = <AccessToken>JSON.parse(obj._body);
+                        // const obj: RootObject = <RootObject>jsonObj;
+                        // const obj = new APIModel();
+                        // this.api_model = <APIModel>jsonObj;
+
+                        const obj: APIModel = <APIModel>jsonObj;
+                        const accessToken: TokenModel = <TokenModel>JSON.parse(obj._body);
+
+                        console.log('token', accessToken);
 
                         localStorage.setItem('MemberId', accessToken.MemberId);
                         localStorage.setItem('MemberType', accessToken.MemberType);

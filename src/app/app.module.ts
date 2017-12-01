@@ -14,6 +14,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CookieService } from 'ngx-cookie-service';
 
+import { APIModel } from '../models/APIModel';
+import { TokenModel } from './../models/TokenModel';
+
 import {
   ReactiveFormsModule,
   FormGroup,
@@ -38,7 +41,9 @@ import {
     ToastModule.forRoot()
   ],
   providers: [
-    CookieService
+    CookieService,
+    APIModel,
+    TokenModel
   ],
   bootstrap: [AppComponent]
 })

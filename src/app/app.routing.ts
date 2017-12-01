@@ -6,6 +6,7 @@ import { ConfirmPasswordComponent } from './confirmPassword/confirmPassword.comp
 // import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
 import { Session } from '../session/session';
+// import { APIModel } from '../models/APIModel';
 // import { RegisterComponent } from './register/index';
 // import { AuthGuard } from './_guards/index';
 
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'forgetPassword', component: ForgetPasswordComponent },
     { path: 'confirmPassword', component: ConfirmPasswordComponent },
+    // { path: 'APIModel', component: APIModel },
     // { path: 'register', component: RegisterComponent },
 
     // otherwise redirect to home
