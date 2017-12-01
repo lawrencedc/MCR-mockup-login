@@ -76,7 +76,6 @@ export class LoginComponent implements OnInit {
             body.set('username', this.loginform.value['username']); // 'yourchapter/testcgn19284@mychapterroom.com');
             body.set('password', this.loginform.value['password']);
             body.set('grant_type', 'password');
-            // const _apimodel = this.api_model = new APIModel();
             // interface RootObject {
             //     _body: string;
             //     status: number;
@@ -86,7 +85,6 @@ export class LoginComponent implements OnInit {
             //     type: number;
             //     url: string;
             // }
-            // this.api_model = new APIModel();
             // interface AccessToken {
             //     access_token: string;
             //     token_type: string;
@@ -108,9 +106,6 @@ export class LoginComponent implements OnInit {
                         const response = JSON.stringify(data);
                         const jsonObj: any = JSON.parse(response);
                         // const obj: RootObject = <RootObject>jsonObj;
-                        // const obj = new APIModel();
-                        // this.api_model = <APIModel>jsonObj;
-
                         const obj: APIModel = <APIModel>jsonObj;
                         const accessToken: TokenModel = <TokenModel>JSON.parse(obj._body);
 
